@@ -19,4 +19,3 @@ filtered data.frame of same structure as input peptideprofiles table
 \description{
 conSecFilter
 }
-

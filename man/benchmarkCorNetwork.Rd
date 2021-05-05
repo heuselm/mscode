@@ -21,4 +21,3 @@ data.frame with column headers as defined by arg protcolnames and cor_pearson an
 \description{
 Benchmark Correlation-Score Network against a Reference interaction table
 }
-

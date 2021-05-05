@@ -4,8 +4,13 @@
 \alias{plotFilterImpact}
 \title{Plot Peptide Elution Profiles per Protein without and with Filters Applied}
 \usage{
-plotFilterImpact(traces, traces.sf = NULL, sf_setting = 3,
-  traces.cf = NULL, cf_setting = 0.2)
+plotFilterImpact(
+  traces,
+  traces.sf = NULL,
+  sf_setting = 3,
+  traces.cf = NULL,
+  cf_setting = 0.2
+)
 }
 \arguments{
 \item{traces}{A traces object containing $peptide.profiles data.table with protein_id and peptide_id col}
@@ -35,4 +40,3 @@ Native elution profiling data can be noisy. To suppress noise and select for the
 # NOT RUN:
 # filterImpactNumbers <- plotFilterImpact(peptide.traces)
 }
-

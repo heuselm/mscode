@@ -4,8 +4,11 @@
 \alias{generateCorNetwork}
 \title{Generate Correlation-Score Network Table from SEC protein.traces}
 \usage{
-generateCorNetwork(protein.traces, cutoff = -1,
-  protcolnames = c("uniprot_a", "uniprot_b"))
+generateCorNetwork(
+  protein.traces,
+  cutoff = -1,
+  protcolnames = c("uniprot_a", "uniprot_b")
+)
 }
 \arguments{
 \item{cutoff}{Correlation score cutoff to apply before returning the output table}
@@ -22,4 +25,3 @@ data.frame with column headers as defined in protcolnames (uniprot_a uniprot_b) 
 \description{
 Generate Correlation-Score Network Table from SEC protein.traces
 }
-

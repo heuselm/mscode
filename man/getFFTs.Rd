@@ -14,4 +14,3 @@ getFFTs(folder = "pyprophet_stats/", pattern = "stats.csv")
 \description{
 Retrieve m/py-Prophet-model-estimated fraction of false targets (FFT) per run
 }
-

@@ -2,8 +2,7 @@
 #' with all proteins connected by 1 edge (first degree interactors)
 #' @import data.table
 #' @import doSNOW
-#' @import parallel
-#' @import doParallel
+#' @importFrom parallel detectCores
 #' @import snow
 #' @param interaction_table Interaction network in edge table format (data.frame)
 #' @param id_column_1 Name of the column containing protein identifier #1
@@ -13,7 +12,7 @@
 #' @export
 #' @author Moritz Heusel
 
-createGroupsFromNetworkTable <- function(interaction_table, n.cores = parallel::detectCores()-1 , id_column_1 = "UniprotA", id_column_2 = "UniprotB"){
+createGroupsFromNetworkTable <- function(interaction_table, n.cores = detectCores()-1 , id_column_1 = "UniprotA", id_column_2 = "UniprotB"){
   # helper function to filter for the first line interactors of one protein
   filterInteractors<- function(protein_id, network_table, prot_a_colid = id_column_1, prot_b_colid = id_column_2){
 	# uniprot<-gene_uniprot_map[gene_uniprot_map[,1] %in% genename,2]
@@ -31,7 +30,11 @@ createGroupsFromNetworkTable <- function(interaction_table, n.cores = parallel::
   # 1. set up compute nodes
   cl <- snow::makeCluster(n.cores)
   doSNOW::registerDoSNOW(cl)
-
+  
+  # #@TODO, test parallel-only implementation
+  # cl = parallel:makeCluster(n.cores)
+  # doParallel::registerDoParallel(cl)
+  
   # Apply filterInteractors using foreach
   nodes <- unique(c(interaction_table$UniprotA, interaction_table$UniprotB)) # nodes = IA network nodes
   n.nodes <- length(nodes)
@@ -40,7 +43,7 @@ createGroupsFromNetworkTable <- function(interaction_table, n.cores = parallel::
     list(data.table(complex_id = i, complex_name = rep(paste0(nodes[i], "_interactors_degree1"), length(interactors)), protein_id = interactors))
   }
   # shut down cluster after finishing calculations
-  stopCluster(cl)
+  snow::stopCluster(cl)
   # collect results in data.frame
   return(as.data.table(rbindlist(modules.n1)))
  }

@@ -14,4 +14,3 @@ plotPeptideProfiles(Traces, select_proteins = "all", output = "pdf")
 \description{
 plot all peptide SEC chromatograms per protein
 }
-

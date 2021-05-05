@@ -17,4 +17,3 @@ data.table with columns uniprot_a uniprot_b and miscore
 \description{
 Parses intact.txt or data.table to 3-column format with clean uniprot_a uniprot_b and miscore columns
 }
-

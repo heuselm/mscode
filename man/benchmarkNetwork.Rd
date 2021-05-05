@@ -4,10 +4,16 @@
 \alias{benchmarkNetwork}
 \title{Benchmarks a Network against a Reference Network/Interaction set}
 \usage{
-benchmarkNetwork(Network, Reference = "intact.txt",
-  names_net = c("UniprotA", "UniprotB"), scores_net = c("pW", "pNI",
-  "pInt"), names_ref = c("uniprot_a", "uniprot_b", "miscore"),
-  minscore_ref = 0.5, n_shuffle_iter = 10, output = "pdf_csv")
+benchmarkNetwork(
+  Network,
+  Reference = "intact.txt",
+  names_net = c("UniprotA", "UniprotB"),
+  scores_net = c("pW", "pNI", "pInt"),
+  names_ref = c("uniprot_a", "uniprot_b", "miscore"),
+  minscore_ref = 0.5,
+  n_shuffle_iter = 10,
+  output = "pdf_csv"
+)
 }
 \arguments{
 \item{Network}{data.table or path to tab-separated .txt file or data.table with columns uniprot_a uniprot_b and confidence score}
@@ -36,4 +42,3 @@ data.frame with column headers as defined by arg protcolnames and cor_pearson an
 \description{
 Benchmarks a Network against a Reference Network/Interaction set
 }
-

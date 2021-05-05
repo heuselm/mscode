@@ -1,6 +1,7 @@
 #' Flattens Correlation Matrix to table with columns row, column and cor
 #' @param cormat correlation matrix with row- and colnames as produced by cor() function
 #' @return data.frame with columns row, column and cor
+#' @export
 flattenCorrMatrix <- function(cormat) {
   ut <- upper.tri(cormat)
   data.table(

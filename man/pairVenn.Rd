@@ -19,4 +19,3 @@ paiwise Venn Diagram plot with areas corresponding to numbers
 \description{
 Draws a pairwise Venn Diagram of two character vectors with overlap area corresponding to overlap size.
 }
-

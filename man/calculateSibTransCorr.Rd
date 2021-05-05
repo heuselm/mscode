@@ -21,4 +21,3 @@ data.transition Data.table of disaggregated OpenSWATH data including SibTransCor
 Calculate sibling transition/fragment ion correlation in fragmention level
 OpenSWATH/mProphet result table
 }
-

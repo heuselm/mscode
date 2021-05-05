@@ -4,8 +4,7 @@
 \alias{extractIdsFromFastaHeader}
 \title{extractIdsFromFastaHeader}
 \usage{
-extractIdsFromFastaHeader(fasta_ids, id_type = "accession",
-  keep.prefix = TRUE)
+extractIdsFromFastaHeader(fasta_ids, id_type = "accession", keep.prefix = TRUE)
 }
 \arguments{
 \item{fasta_ids}{character vector of fasta protein ids}
@@ -17,4 +16,3 @@ extractIdsFromFastaHeader(fasta_ids, id_type = "accession",
 \description{
 sp|P11021|GRP78_HUMAN --> P11021
 }
-

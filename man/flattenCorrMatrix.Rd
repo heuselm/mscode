@@ -15,4 +15,3 @@ data.frame with columns row, column and cor
 \description{
 Flattens Correlation Matrix to table with columns row, column and cor
 }
-

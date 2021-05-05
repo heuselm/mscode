@@ -5,9 +5,12 @@
 \title{createGroupsFromNetworkTable create protein groups around network nodes
 with all proteins connected by 1 edge (first degree interactors)}
 \usage{
-createGroupsFromNetworkTable(interaction_table,
-  n.cores = parallel::detectCores() - 1, id_column_1 = "UniprotA",
-  id_column_2 = "UniprotB")
+createGroupsFromNetworkTable(
+  interaction_table,
+  n.cores = detectCores() - 1,
+  id_column_1 = "UniprotA",
+  id_column_2 = "UniprotB"
+)
 }
 \arguments{
 \item{interaction_table}{Interaction network in edge table format (data.frame)}
@@ -27,4 +30,3 @@ with all proteins connected by 1 edge (first degree interactors)
 \author{
 Moritz Heusel
 }
-

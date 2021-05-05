@@ -20,4 +20,3 @@ Plot PantherDB enrichment/overrepresentation test result
 \examples{
 plotPANTHERresult("panther_gocc.txt", p_cutoff = 0.05)
 }
-
