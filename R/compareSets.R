@@ -42,7 +42,7 @@ compareSets <- function(sets_list = list("Set1" = c("A","B","C","D","E"),
   # UpSetR plot
   upset_obj = UpSetR::upset(detection_matrix)
   print(upset_obj)
-  grid::grid.text(paste(plot_title,"\nUpSet plot"), x = 0.10, y = 0.95,  gp=gpar(fontsize=20))
+  grid::grid.text(paste(plot_title,"\nUpSet plot"), x = 0.13, y = 0.95,  gp=gpar(fontsize=20))
 
   # plot pdf if desired
   if(plot_pdf){
