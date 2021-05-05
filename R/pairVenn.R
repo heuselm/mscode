@@ -1,5 +1,6 @@
 #' pairVenn
 #' @description Draws a pairwise Venn Diagram of two character vectors with overlap area corresponding to overlap size.
+#' For the comparison of more sets, see compareSets function.
 #' @param a Character vector a
 #' @param b Character vector b
 #' @param output character selection either "R" or "pdf"
