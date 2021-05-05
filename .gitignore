@@ -9,3 +9,4 @@
 data/*
 ./testdata/*
 testdata.zip
+/R/*.pdf
