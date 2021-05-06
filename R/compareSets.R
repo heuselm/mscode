@@ -27,10 +27,10 @@ compareSets <- function(sets_list = list("Set1" = c("A","B","C","D","E"),
 
   # Get set analysis intersect groups
   detection_sets = getSetAnalysisGroups(sets_list)
-  barplot(sapply(detection_sets, length), main = "intersect set sizes")
+  barplot(sapply(detection_sets, length), main = "intersect set sizes", las = 2)
 
   if(plot_pdf){
-    dev.copy(pdf, file = paste0("compareSets_intersectsetsizes",list_obj_name,".pdf"),
+    dev.copy(pdf, file = paste0("compareSets_intersectsetsizes_",pdf_analysis_tag,"_",list_obj_name,".pdf"),
              height = 5+length(sets_list),
              width = 5+length(sets_list))
     dev.off()
@@ -46,7 +46,7 @@ compareSets <- function(sets_list = list("Set1" = c("A","B","C","D","E"),
 
   # plot pdf if desired
   if(plot_pdf){
-    dev.copy(pdf, file = paste0("compareSets_upset",list_obj_name,".pdf"),
+    dev.copy(pdf, file = paste0("compareSets_upset",pdf_analysis_tag,"_",list_obj_name,".pdf"),
                                 height = 5+length(sets_list),
                                 width = 5+length(sets_list))
     dev.off()
@@ -59,7 +59,7 @@ compareSets <- function(sets_list = list("Set1" = c("A","B","C","D","E"),
 
   # plot pdf if desired
   if(plot_pdf){
-    dev.copy(pdf, file = paste0("compareSets_Venn",list_obj_name,".pdf"),
+    dev.copy(pdf, file = paste0("compareSets_Venn",pdf_analysis_tag,"_",list_obj_name,".pdf"),
              height = 5+length(sets_list),
              width = 5+length(sets_list))
     dev.off()
