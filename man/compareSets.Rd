@@ -7,18 +7,19 @@
 compareSets(
   sets_list = list(Set1 = c("A", "B", "C", "D", "E"), Set2 = c("A", "B", "D", "E",
     "F"), Set3 = c("B", "D", "E", "F", "G", "H")),
-  plot_pdf = TRUE,
   venn_quantities = TRUE,
+  plot_pdf = TRUE,
+  pdf_analysis_tag = "current_analysis",
   plot_title = "set comparison"
 )
 }
 \arguments{
 \item{sets_list}{List of Character vectors with the respective sets. List names must be unique!}
 
-\item{plot_pdf}{selection whether pdf plots are created or whether the output occurs exclusively within Rconsole.}
-
 \item{venn_quantities}{whether quantities (overlap size numbers) are plotted in Venn Diagrams. This is
 recommended because the eulerr Venn Diagrams overlap areas are only with error proportional to actual overlap size.}
+
+\item{plot_pdf}{selection whether pdf plots are created or whether the output occurs exclusively within Rconsole.}
 
 \item{plot_title}{character selection either "R" or "pdf"}
 }
