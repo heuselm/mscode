@@ -16,4 +16,7 @@ Imports:
     ggplot2,
     VennDiagram,
     doSNOW,
-    snow
+    snow,
+    psych,
+    eulerr,
+    pheatmap
