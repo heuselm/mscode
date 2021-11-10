@@ -27,8 +27,6 @@ maxlynx2xvis = function(combined_folder_location = "path/to/combined/",
   if (length(combined_folder_location) == 2){
     xls_heavy = fread(paste0(combined_folder_location[2],"/txt/crosslinkMsms.txt"))
     prot_heavy = fread(paste0(combined_folder_location[2],"/txt/proteinGroups.txt"))
-  } else {
-    error("combined_folder_location parameter must be provided as character of length 1-2")
   }
 
   # Read experimental Design
