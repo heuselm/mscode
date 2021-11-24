@@ -47,7 +47,7 @@ plotTicProfiles <- function(path_to_raw = "../data/dda/",
 
   # Generic TIC plots
   tics[, Retention_time_min:=as.numeric(Retention_time_min)]
-  tics[, file:=unlist(strsplit(filename, split = "-"))[length(unlist(strsplit(filename, split = "-")))], filename]
+  tics[, file:=unlist(strsplit(file, split = "-"))[length(unlist(strsplit(file, split = "-")))], filename]
 
   tics_all = ggplot(tics) + geom_line(aes(x = Retention_time_min, y = Intensity, group = file)) +
     facet_wrap(~file) + theme_bw() + theme(legend.position = "none") + ggtitle("TIC_all")
