@@ -18,7 +18,7 @@
 maxlynx2xvis = function(combined_folder_location = "path/to/combined/",
                         expDesign = NULL,
                         xvis_filter = "InterProXL|IntraProXL",
-                        xvis_remove_decoys = TRUE,
+                        remove_decoys = TRUE,
                         plot_pdf = TRUE){
 
   # Read XLMSMS.txt files
@@ -74,7 +74,7 @@ maxlynx2xvis = function(combined_folder_location = "path/to/combined/",
   # Add id column
   xls[, Id:=paste(Sequence1, Sequence2,
     paste0("a",gsub(";","", Pep_InterLink1)),
-    paste0("a",gsub(";","", Pep_InterLink1)),
+    paste0("b",gsub(";","", Pep_InterLink2)),
     sep = "-"), row.names(xls)]
 
   # Assemble & output xl tables for xvis:
@@ -82,19 +82,23 @@ maxlynx2xvis = function(combined_folder_location = "path/to/combined/",
   xls[, AbsPos2:=as.numeric(gsub(";","", Pro_InterLink2)), row.names(xls)]
 
   # Subset xls table for xvis
-  xvis_xls = unique(xls[grep(xvis_filter, Crosslink_Product_Type)])
+  xls = unique(xls[grep(xvis_filter, Crosslink_Product_Type)])
 
   # remove decoys
-  if (xvis_remove_decoys == TRUE){
-    xvis_xls = xvis_xls[grep("REV_", Proteins1, invert = T)][grep("REV_", Proteins2, invert = T)]
+  if (remove_decoys == TRUE){
+    xls = xls[grep("REV_", Proteins1, invert = T)][grep("REV_", Proteins2, invert = T)]
   }
-  setnames(xvis_xls, "Proteins1", "Protein1")
-  setnames(xvis_xls, "Proteins2", "Protein2")
-  setnames(xvis_xls, "Mass_error_[ppm]", "Mass_error_ppm")
+  setnames(xls, "Proteins1", "Protein1")
+  setnames(xls, "Proteins2", "Protein2")
+  setnames(xls, "Mass_error_[ppm]", "Mass_error_ppm")
+
+  # Subset xls table for xvis
+  xvis_xls = unique(xls[grep(xvis_filter, Crosslink_Product_Type)])
+
   fwrite(xvis_xls, "xvis_xls.csv")
 
   # assemble Protein lengths
-  xvis_lengths = unique(data.table("Protein" = unique(c(xvis_xls$Protein1, xvis_xls$Protein2))))
+  xvis_lengths = unique(data.table("Protein" = unique(c(xls$Protein1, xls$Protein2))))
   xvis_lengths = merge(xvis_lengths, unique(prot[, .(Protein_IDs, Sequence_length)]), by.x = "Protein", by.y = "Protein_IDs", all.x = T, all.y = F)
   setnames(xvis_lengths, "Sequence_length", "Length")
   fwrite(xvis_lengths, "xvis_lengths.csv")
