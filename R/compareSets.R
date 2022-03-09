@@ -26,6 +26,7 @@ compareSets <- function(sets_list = list("Set1" = c("A","B","C","D","E"),
   list_obj_name = deparse(substitute(sets_list))
 
   # Get set analysis intersect groups
+  set_number = length(names(sets_list))
   detection_sets = getSetAnalysisGroups(sets_list)
   barplot(sapply(detection_sets, length), main = "intersect set sizes", las = 2)
 
