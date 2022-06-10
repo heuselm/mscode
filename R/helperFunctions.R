@@ -1,7 +1,7 @@
 # Auxiliary functions
 
 #' fromListWithNames
-#' @Description alternative to UpSetR::fromList that maintains element names in row.names of the output detection matrix.
+#' @description alternative to UpSetR::fromList that maintains element names in row.names of the output detection matrix.
 #' Required to track members in intersect sets. Grabbed & modified from https://github.com/hms-dbmi/UpSetR/issues/85.
 #' @param input list of named character vectors containing the sets
 fromListWithNames <- function (input = list("Set1" = c("A","B","C","D","E"),
@@ -23,7 +23,7 @@ fromListWithNames <- function (input = list("Set1" = c("A","B","C","D","E"),
 }
 
 #' getSetAnalysisGroups
-#' @Description Tracks members in intersect sets. Grabbed & modified from https://github.com/hms-dbmi/UpSetR/issues/85.
+#' @description Tracks members in intersect sets. Grabbed & modified from https://github.com/hms-dbmi/UpSetR/issues/85.
 #' @param input list of named character vectors containing the sets
 getSetAnalysisGroups <- function (listInput = list("Set1" = c("A","B","C","D","E"),
                                             "Set2" = c("A","B","D","E","F"),
