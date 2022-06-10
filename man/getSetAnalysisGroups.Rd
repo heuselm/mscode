@@ -14,5 +14,5 @@ getSetAnalysisGroups(
 \item{input}{list of named character vectors containing the sets}
 }
 \description{
-getSetAnalysisGroups
+Tracks members in intersect sets. Grabbed & modified from https://github.com/hms-dbmi/UpSetR/issues/85.
 }

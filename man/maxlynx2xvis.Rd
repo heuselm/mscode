@@ -10,7 +10,7 @@ maxlynx2xvis(
   combined_folder_location = "path/to/combined/",
   expDesign = NULL,
   xvis_filter = "InterProXL|IntraProXL",
-  xvis_remove_decoys = TRUE,
+  remove_decoys = TRUE,
   plot_pdf = TRUE
 )
 }
@@ -25,9 +25,9 @@ should minimally be provided. Additional columns will be propagated to the outpu
 
 \item{xvis_filter}{Filter string which Crosslink types should be included in the output xvis_xls.csv; defaults to "InterProXL|IntraProXL" (both included)}
 
-\item{xvis_remove_decoys}{Logical, whether t-d, d-t and d-d XLs shall be removed before export to xvis_xls.csv. Defaults to TRUE.}
-
 \item{plot_pdf}{Logical, whether overview pdf should be generated, highlighting the ID numbers of and overlap between channels}
+
+\item{xvis_remove_decoys}{Logical, whether t-d, d-t and d-d XLs shall be removed before export to xvis_xls.csv. Defaults to TRUE.}
 }
 \value{
 a list of 1) merged data.table of crosslinks underlying xvis_xls.csv; 2) Crosslink MSMS count table underlying summary plot;

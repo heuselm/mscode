@@ -13,5 +13,6 @@ fromListWithNames(
 \item{input}{list of named character vectors containing the sets}
 }
 \description{
-fromListWithNames
+alternative to UpSetR::fromList that maintains element names in row.names of the output detection matrix.
+Required to track members in intersect sets. Grabbed & modified from https://github.com/hms-dbmi/UpSetR/issues/85.
 }
