@@ -4,19 +4,27 @@ Version: 1.0
 Authors@R: person("Moritz", "Heusel", email = "heusel@imsb.biol.ethz.ch", role = c("aut", "cre"))
 Description: Allows loading quantitative proteomics data from different result
     file types and processing.
-Depends:
-    R (>= 4.0)
 License: What license is it under?
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.0
 Imports:
+    corrplot,
     data.table,
+    doSNOW,
+    eulerr,
+    ggplot2,
+    ggrepel,
+    grid,
+    gridExtra,
+    htmlwidgets,
+    parallel,
+    pheatmap,
+    plotly,
+    psych,
+    rawrr,
     reshape,
     ROCR,
-    ggplot2,
-    VennDiagram,
-    doSNOW,
     snow,
-    psych,
-    eulerr,
-    pheatmap
+    UpSetR,
+    VennDiagram
+Encoding: UTF-8
