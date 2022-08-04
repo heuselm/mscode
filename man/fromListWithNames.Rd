@@ -5,8 +5,8 @@
 \title{fromListWithNames}
 \usage{
 fromListWithNames(
-  input = list(Set1 = c("A", "B", "C", "D", "E"), Set2 = c("A", "B", "D", "E", "F"),
-    Set3 = c("B", "D", "E", "F", "G", "H"))
+  input = list(Set1 = c("A", "B", "C", "D", "E"), Set2 = c("A", "B", "D", "E", "F"), Set3
+    = c("B", "D", "E", "F", "G", "H"))
 )
 }
 \arguments{

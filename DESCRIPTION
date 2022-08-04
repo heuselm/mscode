@@ -6,7 +6,7 @@ Description: Allows loading quantitative proteomics data from different result
     file types and processing.
 License: What license is it under?
 LazyData: true
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.1
 Imports:
     corrplot,
     data.table,

@@ -5,8 +5,8 @@
 \title{compareSets}
 \usage{
 compareSets(
-  sets_list = list(Set1 = c("A", "B", "C", "D", "E"), Set2 = c("A", "B", "D", "E",
-    "F"), Set3 = c("B", "D", "E", "F", "G", "H")),
+  sets_list = list(Set1 = c("A", "B", "C", "D", "E"), Set2 = c("A", "B", "D", "E", "F"),
+    Set3 = c("B", "D", "E", "F", "G", "H")),
   venn_quantities = TRUE,
   plot_pdf = TRUE,
   pdf_analysis_tag = "current_analysis",
