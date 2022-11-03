@@ -4,6 +4,7 @@
 #' @description alternative to UpSetR::fromList that maintains element names in row.names of the output detection matrix.
 #' Required to track members in intersect sets. Grabbed & modified from https://github.com/hms-dbmi/UpSetR/issues/85.
 #' @param input list of named character vectors containing the sets
+#' @export
 fromListWithNames <- function (input = list("Set1" = c("A","B","C","D","E"),
                                             "Set2" = c("A","B","D","E","F"),
                                             "Set3" = c("B","D","E","F","G","H"))) {
