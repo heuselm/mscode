@@ -41,7 +41,7 @@ compareSets <- function(sets_list = list("Set1" = c("A","B","C","D","E"),
   detection_matrix = fromListWithNames(sets_list)
 
   # UpSetR plot
-  upset_obj = UpSetR::upset(detection_matrix)
+  upset_obj = UpSetR::upset(detection_matrix, nsets = ncol(detection_matrix))
   print(upset_obj)
   grid::grid.text(paste(plot_title,"\nUpSet plot"), x = 0.13, y = 0.95,  gp=gpar(fontsize=20))
 
