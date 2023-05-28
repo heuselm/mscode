@@ -1,4 +1,4 @@
-Package: mocode
+Package: mscode
 Title: Integrates MS-based-proteomics Data Analysis Code
 Version: 1.0
 Authors@R: person("Moritz", "Heusel", email = "heusel@imsb.biol.ethz.ch", role = c("aut", "cre"))
@@ -6,7 +6,7 @@ Description: Allows loading quantitative proteomics data from different result
     file types and processing.
 License: What license is it under?
 LazyData: true
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Imports:
     corrplot,
     data.table,
