@@ -26,6 +26,7 @@ Imports:
     ROCR,
     snow,
     UpSetR,
-    VennDiagram
+    VennDiagram,
+    mzID
 Encoding: UTF-8
 biocViews:
