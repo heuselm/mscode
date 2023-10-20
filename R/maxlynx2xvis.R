@@ -32,9 +32,9 @@ maxlynx2xvis = function(combined_folder_location = "path/to/combined/",
   # Read experimental Design
   if (is.null(expDesign)){
     expDes = fread(paste0(combined_folder_location[1],"experimentalDesignTemplate.txt"))
-  } else if (class(expDesign) == "character"){
+  } else if (is(expDesign, "character")){
     expDes = fread(expDesign)
-  } else if (class(expDesign) == "data.frame"){
+  } else if (is(expDesign, "data.frame")){
     expDes = as.data.table(expDesign)
   } else {
     expDes = expDesign
